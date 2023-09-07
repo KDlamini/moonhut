@@ -16,7 +16,7 @@ const Logo: React.FC<LogoProps> = ({ src, className }) => {
     <Image 
       src={src}
       alt="Logo"
-      className={`logo ${className}`}
+      className={`logo hidden md:block cursor-pointer ${className}`}
       width={120}
       height={60}
       onClick={() => router.push('/')}
