@@ -1,18 +1,11 @@
 'use client';
 
-import { FC } from 'react';
 import Container from "@/components/layout/Container";
 import Logo from '@/components/atoms/Logo/Logo';
 import Search from '@/components/molecules/Search/Search';
+import UserMenu from "@/components/molecules/UserMenu/UserMenu";
 
-interface HeaderProps {}
-
-const items = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-];
-
-const Header: FC<HeaderProps> = () => {
+const Header = () => {
 
   return (
     <header className="header fixed w-full bg-white z-10 shadow-sm">
@@ -28,8 +21,9 @@ const Header: FC<HeaderProps> = () => {
               md:gap-0
             "
           >
-            <Logo src="/images/logo.png" className="hidden md:block cursor-pointer border-[1px] rounded" />
+            <Logo src="/images/logo.png" className="border-[1px] rounded" />
             <Search />
+            <UserMenu />
           </div>
         </Container>
       </div>
