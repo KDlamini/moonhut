@@ -64,7 +64,7 @@ function Search() {
           <div 
             className="
               p-2 
-              bg-teal-600 
+              bg-teal-500 
               rounded-full 
               text-white
             "
