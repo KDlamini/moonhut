@@ -7,6 +7,8 @@ import { FaGoogle } from 'react-icons/fa';
 import { FieldValues, useForm, SubmitHandler } from 'react-hook-form';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '@/components/atoms/Heading/Heading';
+import Input from '@/components/atoms/Inputs/Input';
 
 
 const RegisterModal = () => {
@@ -33,6 +35,40 @@ const RegisterModal = () => {
     }
   }, [onClose]);
 
+  const bodyContent = (
+    <div className="flex flex-col gap-4">
+      <Heading
+        title="Welcome to Moonhut"
+        subtitle="Create an account!"
+      />
+      <Input
+        id="email"
+        label="Email"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
+      <Input
+        id="name"
+        label="Name"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
+      <Input
+        id="password"
+        label="Password"
+        type="password"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
+    </div>
+  )
+
   return (
     <Modal
       disabled={isLoading}
@@ -41,6 +77,7 @@ const RegisterModal = () => {
       onClose={onClose}
       actionLabel='Continue'
       onSubmit={handleSubmit(onSubmit)}
+      body={bodyContent}
     />
   )
 }
