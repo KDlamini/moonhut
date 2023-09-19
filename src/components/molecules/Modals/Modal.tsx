@@ -78,7 +78,7 @@ const Modal: React.FC<ModalProps> = ({
           overflow-y-auto 
           fixed 
           inset-0 
-          z-50 
+          z-50  
           outline-none 
           focus:outline-none
           bg-neutral-800/70
@@ -90,7 +90,7 @@ const Modal: React.FC<ModalProps> = ({
           md:w-4/6
           lg:w-3/6
           xl:w-2/5
-          my-6
+          my-6 
           mx-auto 
           h-full 
           lg:h-auto
