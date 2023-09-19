@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 import Header from '@/components/organisms/Header/Header'
 import RegisterModal from '@/components/molecules/Modals/RegisterModal'
+import ToasterProvider from '@/providers/ToasterProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
           <Header />
           <RegisterModal />
+          <ToasterProvider />
         <div className="pb-20 pt-28">
           {children}
         </div>
